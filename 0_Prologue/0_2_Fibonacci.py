@@ -1,4 +1,8 @@
-import time
+
+import sys
+sys.path.append('../')
+
+from help import selftime 
 
 # Вычисление чисел Фибоначчи
 # Каждый член равен сумме двух предыдущих.
@@ -32,17 +36,13 @@ def Fib2(n):
     # 2. How much time does it take, as a function of n?
     # 3. And can we do better?
 
-def selftime(func,arg):
-   
-    start_time = time.time()
-    print(f'name:{func.__name__}() arg:{arg} -> {func(arg)} time: {round((time.time() - start_time),4)} sec.')
 
 def main(N:int) -> None:
 
     selftime(Fib1,N)
     selftime(Fib2,N)
 
-
+    selftime(Fib1,1,2,3)
 
 
 if __name__ == '__main__':
