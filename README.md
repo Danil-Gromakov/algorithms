@@ -1,2 +1,12 @@
-# algorithms
-Let's start algorithms
+# Algorithms
+
+#### Book
+
+    Algorithms
+    Copyright c 2006 S. Dasgupta, C. H. Papadimitriou, and U. V. Vazirani
+    July 18, 2006
+
+- 0 Prologue
+    - 0.2 Fibonacci
+- 1 Algorithms with numbers
+    - 1.1 Basic arithmetic
