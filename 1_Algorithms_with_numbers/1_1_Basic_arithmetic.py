@@ -3,24 +3,24 @@ sys.path.append('../')
 
 from help import selftime 
 
-# def Multiply(x:int,y:int) -> int:
+# def MultiplyOne(x:int,y:int) -> int:
 #     '''
 #     Input: Two n-bit integers x and y, where y ≥ 0
 #     Output: Their product
 #     '''
 
 #     if y == 0: return 0
-#     z = Multiply(x,y//2)
+#     z = MultiplyOne(x,abs(y))
   
-#     if y % 2 == 0: # -> even 
+#     if abs(y) % 2 == 0: # -> even 
 #         return z
 #     else:
 #         return x + z  
  
-def Multiply(x:int,y:int) -> int:
+def MultiplyTwo(x:int,y:int) -> int:
 
     if y == 0 :return 0
-    z = Multiply(x,y-1)
+    z = MultiplyTwo(x,y-1)
     return z+x
 
 def Divide(x:int,y:int) -> int:
@@ -44,7 +44,9 @@ def Divide(x:int,y:int) -> int:
 
 def main():
 
-    selftime(Multiply,112,13)
+
+    # selftime(MultiplyOne,2,3)
+    selftime(MultiplyTwo,2,3)
     selftime(Divide,64,2)
     
     
