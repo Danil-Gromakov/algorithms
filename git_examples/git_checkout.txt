@@ -1,3 +1,6 @@
+add new from new branch
+
+
 Hello checkout, will commit it
 
 <<<<<<< HEAD
