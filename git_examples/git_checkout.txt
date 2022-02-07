@@ -1,3 +1,10 @@
+add new from new branch
+
+
 Hello checkout, will commit it
 
+<<<<<<< HEAD
+Update file, will commit it
+=======
 After I update it, will commit it
+>>>>>>> 93748d38abde82af62c8efe9f68d9be669444e71
