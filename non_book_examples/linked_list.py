@@ -17,19 +17,28 @@ class Node():
         last.data = x # Назначить данные в блок
 
         # Пока блок last - это блок B, и блок A не сcылается на B
-
-
-
         # current = self # Доступ к блоку A, текущий контекст
-        
-
         while self.reference: # Проверим A на наличие ссылки на B, если есть, то сменить текущий контекст на следующий
             self = self.reference
-
         # После перебора всех ссылок на объекты, мы упёрлись в None - нет ссылок на следущий объект
         self.reference = last
 
+    def get(self,get_index) -> object:
+        '''вернуть по индексу элемент'''
 
+
+        last_reference = self.reference
+        index_reference = 0
+
+        while index_reference <= get_index:
+
+            if index_reference == get_index:
+                print(f'by index: {get_index} get data: {last_reference.data}')
+                return last_reference.data
+
+            index_reference = index_reference + 1 
+
+            last_reference = last_reference.reference
         
 ll = Node()
 
@@ -39,6 +48,8 @@ ll.set(2)
 ll.set(3)
 ll.set(4)
 
+
+ll.get(0)
 
 while ll.reference:
     
